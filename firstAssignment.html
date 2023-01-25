@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 1</title>
+    <link rel="stylesheet" href="selectStyling.css">
+    <style>
+        
+/*
+.selectdiv {
+  position: relative;
+
+}
+
+[To remove button from IE11 ]
+select::-ms-expand {
+     display: none;
+}
+
+.selectdiv:after {
+  content: '\23F4 \23F5';
+  font: 12px "Consolas", monospace;
+  color: #333;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+left: 22%;
+  [Adjust for position however you want]
+  top: 3px;
+  padding: 0 0 2px;
+  border-bottom: 1px solid #999;
+  background-color: cornflowerblue;
+  /*left line 
+  
+  position: absolute;
+  pointer-events: none;
+
+}
+
+.selectdiv select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Add some styling 
+    display: block;
+  width: 38%;
+
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  -ms-word-break: normal;
+  word-break: normal;}*/
+
+
+ .crossStyle{
+    padding-right: 15px;
+    font-size: larger;
+    color: rgb(150, 145, 145);
+ }
+
+ .tab2Style{
+  margin: 0 -10px;
+  display: block;
+  border-spacing: 10px 0;
+}
+
+    .bgcolor1{background-color: rgb(240, 240, 240);}
+    td.bgcolor2{background-color: rgb(220, 220, 220);}
+    tr.bgcolor3{background-color: rgb(220, 220, 220);}
+    td.bgcolor4{background-color: rgb(240, 240, 240);}
+
+    th, td {
+    text-align: left;
+    padding:3px;
+    }
+
+    .tr1{
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+
+    }
+
+    .t1{    
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+    text-align: left;
+    }
+    
+    td.tdborder{
+     border:solid;
+      }
+      
+    input[type=text]{
+        border:solid #cccccc 1px;
+        border-top: solid rgb(145, 145, 145);
+    }
+
+    .red{
+    color: red;
+    }
+
+      </style>
+
+</head>
+<body>
+<div> 
+    <table>
+        <tr >
+            <th >
+                <label for="title">Title:</label>
+                <label class="red" for="title">*</label><br>
+                <input type="text" name="title" id="title" size="60">
+            </th>
+            <th>
+                <label for="shorttitle">Short Title:</label>
+                <label class="red" for="title">*</label><br>
+                <input type="text" name="shorttitle" id="shorttitle">
+            </th>
+            <th>
+                <label for="subject">Subj.:</label><br>
+                <sup style="font-weight: normal;">BLST</sup>
+            </th>
+
+            <th>
+                <label for="num">Num.:</label><br>
+                <input type="text" name="num" id="num" size="1" value="10">
+            </th>            
+            <th>
+                <label for="section">Section:</label><br>
+                <input type="text" name="section" id="section" size="3" value="01">
+            </th>
+            <th>
+                <label for="year">Year:</label><br>
+                <sup style="font-weight: normal;">0910</sup>
+            </th>
+        </tr>
+    </table>
+</div>
+
+
+    <br>
+
+
+<div>
+
+        <table class="t1 bgcolor1" style="width: 65%;" >
+            <tr class="tr1">
+                
+                <td>
+                    <input type="checkbox" name="ch1" id="ch1">
+                    </td>
+                    <td>
+                    <label for="ch1">Enrollment Limit</label>
+                    </td>
+                    <td>
+                    <label for="numt2">Num.:</label><br>
+                    <input type="text" name="numt2" id="numt2" size="1">
+                    </td> 
+                    <td>
+                    <label for="Rationale">Rationale:</label><br>
+                    <input type="text" name="Rationale" id="Rationale" size="60">
+                </td>
+                
+                
+
+
+                <td  style="vertical-align: super;" class=" tr1" rowspan="8">
+                    <table style="width: min-content;">
+                        <tr> 
+                            <th>
+                            <label for="classMW">Class Meetings/Week:</label><br>
+                            
+                            <select class="classic"  name="classMW" id="classMW" size="1" style="width:40% ;">
+                                <option value="1" selected>1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                            
+                            </th>
+                        </tr> 
+
+
+                        <tr>
+                            <th>
+                                <label for="classHW">Class Hours/Week:</label><br>
+                                <select class="classic"  name="classHW" id="classHW" size="1" style="width: 40%;">
+                                <option value="0" selected>0</option>
+                                <option value="1" >1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                            </th>
+                        </tr> 
+
+                        <tr>
+                            <th>
+                            <label for="semOff">Semester(s)Offred:</label><br>
+                            
+                            <select  class="classic" name="semOff" id="semOff" size="1" style="width: 80%; font-size: 16px;">
+                                <option value="--None--" selected>--None--</option>
+                                <option value="math" >math</option>
+                                <option value="bio">bio</option>
+                                <option value="chim">chim</option>
+                                <option value="history">history</option>
+                            </select>
+                            
+                            </th>
+                        </tr>
+                                                                        
+                        <th><input type="checkbox" name="col2ch1" id="col2ch1" checked>
+                        <label for="col2ch1">Incl.semestre in prereqs.</label><br>
+                    
+
+                
+                        <input type="checkbox" name="col2ch2" id="col2ch2">
+                        <label for="col2ch2">Offered only once</label><br>
+                    
+                    
+                    
+                        <input type="checkbox" name="col2ch3" id="col2ch3">
+                        <label for="col2ch3">Incl. in printed</label><br>
+                        </th>
+
+
+                    </table>
+                
+
+                <td  style="vertical-align:top;" rowspan="8"  style="width: 20%;">
+                    <table>
+                            <tr>
+                            <th>
+                            <label for="keywords" style="font-weight: bold;">Keywords:</label><br>
+                            </th></tr>
+                            <tr><td>
+                            <input type="checkbox" name="col3ch1" id="col3ch1">
+                            <label for="col3ch1">Science for non-majors</label><br>
+                            </td></tr>
+                            <tr><td>
+                            <input type="checkbox" name="col3ch2" id="col3ch2">
+                            <label for="col3ch2">Fine arts for non-majors</label><br>
+                            </td></tr>
+                            <tr><td>
+                            <input type="checkbox" name="col3ch3" id="col3ch3">
+                            <label for="col3ch3">Lab science course</label><br>
+                            </td></tr>
+                            <tr><td>
+                            <input type="checkbox" name="col3ch4" id="col3ch4">
+                            <label for="col3ch4">Artistic practice</label><br>
+                            </td></tr>
+                        
+                        <tr><td>
+                            <input type="checkbox" name="col3ch5" id="col3ch5">
+                            <label for="col3ch5">Foreign language/culture taught in English</label><br>
+                        </td></tr>
+                        
+                        <tr><td>
+                            <input type="checkbox" name="col3ch6" id="col3ch6">
+                            <label for="col3ch6">Community based learnig</label><br>
+                        </td></tr>
+                        <tr><td>
+                            <input type="checkbox" name="col3ch7" id="col3ch7">
+                            <label for="col3ch7">Writing attentive</label><br>
+                        </td></tr>
+                        <tr><td>
+                            <input type="checkbox" name="col3ch8" id="col3ch8">
+                            <label for="col3ch8">Writing intensive</label><br>
+                            
+                        </td></tr>
+                        
+                        </tr>
+                </table>
+
+                </td>
+            </tr>
+            <tr class="tr1 bgcolor3">
+                <td>
+                    <input type="checkbox" name="ch2" id="ch2">
+                </td>
+                <td>
+                    <label for="ch2">Consent Required</label><br>
+                </td>
+                <td>
+                    &nbsp;
+                </td> 
+                <th>
+                    <label for="Rationale">Rationale:</label><br>
+                    <input type="text" name="Rationale" id="Rationale" size="60">
+                </th>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="checkbox" name="ch3" id="ch3">
+                </td>
+                <td>
+                    <label for="ch3">Limit Class Level</label><br>
+                </td>
+                <th >
+                    <label for="code">code:</label><br>
+                    <input type="text" name="code" id="code" size="1">
+                </th> 
+                <th>
+                    <label for="Rationale">Rationale:</label><br>
+                    <input type="text" name="Rationale" id="Rationale" size="60">
+                </th>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <th>
+                    <label for="oe">How to handle over enrollment:</label><br>
+                    <input type="text" name="oe" id="oe" size="60">
+                </th>
+            </tr>
+
+            <tr  class="bgcolor3" style=" border-top: 1px solid #ddd;">
+                <td>
+                    <input type="checkbox" name="ch4" id="ch4">
+                </td>
+                <td>
+                    <label for="ch4">Prerequisite</label><br>
+                </td>
+                <td>&nbsp; </td> 
+                <th>
+                    <label for="Rationale">Rationale:</label><br>
+                    <input type="text" name="Rationale" id="Rationale" size="60">
+                </th>
+            </tr>
+            <tr class="bgcolor3">
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <th>
+                    <label for="reqp">Required Preregs.(major,course):</label><br>
+                    <input type="text" name="reqp" id="reqp" size="60">
+                </th>
+            </tr>
+            <tr class="bgcolor3">
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <th>
+                    <label for="recp">Recommented Preregs.:</label><br>
+                    <input type="text" name="recp" id="recp" size="60">
+                </th>
+            </tr>
+            
+        </table>
+    </table>
+    </div>
+<br>
+
+<div>
+    <table class="tab2Style">
+
+        <tr>
+            <th>Approvals:</th>
+            <th>Date:</th>
+            <th>Comment:</th>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="checkbox" name="ch5" id="ch5">
+                <label for="ch5">CEP</label>
+            </td>
+            <td class="bgcolor4" >
+                <label class="crossStyle" for="tab2text1">&#10021;</label>
+                <input type="text">
+            </td>
+            <td class="bgcolor4">
+                <label class="crossStyle" for="tab2text11">&#10021;</label>
+                <input type="text" size="60">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="checkbox" name="ch6" id="ch6">
+                <label for="ch6">Committee of six</label>
+            </td>
+            <td class="bgcolor2">
+                <label class="crossStyle" for="tab2text2">&#10021;</label>
+                <input type="text">
+            </td>
+            <td class="bgcolor2">
+                <label class="crossStyle" for="tab2text22">&#10021;</label>
+                <input type="text" size="60">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="checkbox" name="ch7" id="ch7">
+                <label for="ch7">Faculty</label>
+            </td>
+            <td class="bgcolor4">
+                <label class="crossStyle" for="tab2text3">&#10021;</label>
+                <input type="text">
+            </td>
+            <td class="bgcolor4">
+                <label class="crossStyle" for="tab2text33">&#10021;</label>
+                <input type="text" size="60">
+            </td>
+        </tr>
+        
+
+
+    </table>
+</div>
+</body>
+</html>
