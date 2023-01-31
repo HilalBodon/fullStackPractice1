@@ -1,0 +1,28 @@
+
+table{
+    border: solid rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+input[type="button"]{
+    width: 90%;
+    padding: 15px 40px;
+    background-color: rgb(36, 176, 186);
+    color: white;
+    font-size: 25px;
+    border: solid rgb(19, 63, 237);
+    border-radius: 5px;
+}
+
+.wrapper {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #0b2164;
+    padding: 50px;
+    color: #fff;
+    text-align: center;
+    border-radius: 25px;
+}
